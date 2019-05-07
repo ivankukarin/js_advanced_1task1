@@ -14,5 +14,5 @@ const bonus = (array) => { Math.round (
 		}
 	);
 
-	};
+};
 

@@ -1,6 +1,6 @@
 let arrayPrices = [200, 550, 4000, 23, 58, 5000, 485, 711];
 let minGamePoints = 10000;
-let arraySum = (array) =>
+const arraySum = (array) =>
 	{
 		let sum = 0;
 		for (let value of array) 
@@ -9,12 +9,13 @@ let arraySum = (array) =>
 	};
 
 
-
-const bonus = (array) => {
-	if (arraySum(array) > 10000 ) {
-		arraySum(array) * 0.05;
+const bonus = (array) => 
+	{
+		if (arraySum(array) > minGamePoints) {
+		return arraySum(array) * 5 /100 }
 	};
-};
+
+bonus(arrayPrices);
 
 console.log(bonus(arrayPrices));
 
@@ -32,5 +33,5 @@ let num2str = function(x) {
     }
 
 
-console.log (bonus(arrayPrices) + num2str(bonus(arrayPrices)));
+console.log(bonus(arrayPrices) + num2str(bonus(arrayPrices)));
 
